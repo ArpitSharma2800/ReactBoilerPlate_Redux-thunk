@@ -1,5 +1,10 @@
 import React from "react";
-
+import Test from "./test/test.jsx";
+import "./App.css";
 export default function App() {
-  return <div>React App Created By Arpit...</div>;
+  return (
+    <div className="App">
+      <Test />
+    </div>
+  );
 }
