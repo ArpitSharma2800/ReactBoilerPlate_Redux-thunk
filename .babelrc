@@ -22,6 +22,7 @@
   "plugins": [
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-transform-react-jsx-self",
-    "@babel/plugin-transform-react-jsx"
+    "@babel/plugin-transform-react-jsx",
+    "@babel/transform-runtime"
   ]
 }
