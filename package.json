@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-cli serve --mode development --hot --host 0.0.0.0",
+    "start": "webpack-cli serve --mode development --open --hot",
     "build": "webpack --mode production"
   },
   "author": "",
