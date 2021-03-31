@@ -1,20 +1,16 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const path = require("path");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+
 module.exports = {
-  context: __dirname,
-  entry: "./src/index.js",
+  entry: './src/index.js',
+  output: {
+    path: path.join(__dirname, '/dist'),
+    filename: './bundle.js',
+  },
   resolve: {
     modules: ['node_modules'],
     extensions: ['.js', '.jsx', '.ts', '.tsx']
-  },
-  output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "main.js",
-    publicPath: "/",
-  },
-  devServer: {
-    historyApiFallback: true,
   },
   module: {
     rules: [{
@@ -37,10 +33,13 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    historyApiFallback: true,
+  },
   plugins: [
-    new HtmlWebPackPlugin({
-      template: path.resolve(__dirname, "public/index.html"),
-      filename: "index.html",
+    new HtmlWebpackPlugin({
+      title: 'Production',
+      template: './public/index.html',
     }),
     new CaseSensitivePathsPlugin(),
   ],
