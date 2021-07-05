@@ -37,6 +37,7 @@
     "babel-loader": "^8.2.2",
     "case-sensitive-paths-webpack-plugin": "^2.3.0",
     "css-loader": "^5.0.1",
+    "dotenv-webpack": "^7.0.3",
     "eslint": "^7.30.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.23.4",
